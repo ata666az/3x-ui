@@ -9,7 +9,7 @@ export NGINX_PORT=3000
 cd /usr/local/x-ui
 
 echo "🔧 Applying panel settings via x-ui CLI..."
-./x-ui setting -port 3000 -webBasePath /managepanel/ || true
+./x-ui setting -port 8080 -webBasePath /managepanel/ || true
 
 echo "🔧 Building nginx.conf for fixed port: $NGINX_PORT"
 envsubst '${NGINX_PORT}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf
